@@ -1,0 +1,11 @@
+drop function dbo.endIndex;
+drop function dbo.startIndex;
+drop function dbo.regexMatch;
+drop function dbo.stringContains;
+drop function dbo.stringReplace;
+drop function dbo.toProper;
+drop function dbo.indexList;
+drop function dbo.nullOrEmpty;
+drop function dbo.regexReplace;
+drop function dbo.regexSplit;
+drop function dbo.stringDist;

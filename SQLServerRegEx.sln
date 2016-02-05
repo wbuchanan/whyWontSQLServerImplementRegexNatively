@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServerRegEx", "SQLServerRegEx\SQLServerRegEx.csproj", "{4440A579-F9CC-4968-907B-D551008CA044}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0B6BB279-D567-4AC4-ADBC-ACF6F96D26B9}"
+	ProjectSection(SolutionItems) = preProject
+		SQLServerRegEx\SQLServerRegEx.cs = SQLServerRegEx\SQLServerRegEx.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		x|Any CPU = x|Any CPU
+		Description = Exposes Regular Expression Methods for SQL Server 2008 Functions
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4440A579-F9CC-4968-907B-D551008CA044}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{4440A579-F9CC-4968-907B-D551008CA044}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{4440A579-F9CC-4968-907B-D551008CA044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4440A579-F9CC-4968-907B-D551008CA044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4440A579-F9CC-4968-907B-D551008CA044}.x|Any CPU.ActiveCfg = Release|Any CPU
+		{4440A579-F9CC-4968-907B-D551008CA044}.x|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
