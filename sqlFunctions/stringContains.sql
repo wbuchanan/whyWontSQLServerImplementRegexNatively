@@ -3,4 +3,4 @@
 CREATE FUNCTION [dbo].stringContains(@functionString AS NVARCHAR(MAX), @columnString AS NVARCHAR(MAX)) 
 RETURNS INT
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.stringContains
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].stringContains

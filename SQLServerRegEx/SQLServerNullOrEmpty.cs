@@ -2,14 +2,18 @@ using System;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-public partial class SQLServerNullOrEmpty {
+namespace SQLServerRegEx {
 
-    public SQLServerNullOrEmpty() { 
-    }
+    public class SQLServerNullOrEmpty {
 
-    [SqlFunction(IsDeterministic = true, IsPrecise = true)]
-    public Int32 nullOrEmpty(String columnString) {
-        return String.IsNullOrEmpty(columnString) ? 1 : 0;
+        public SQLServerNullOrEmpty() {
+        }
+
+        [SqlFunction(IsDeterministic = true, IsPrecise = true)]
+        public static Int32 nullOrEmpty(String columnString) {
+            return String.IsNullOrEmpty(columnString) ? 1 : 0;
+        }
+
     }
 
 }

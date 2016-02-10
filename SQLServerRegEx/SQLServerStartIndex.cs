@@ -2,14 +2,18 @@ using System;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-public partial class SQLServerStartIndex {
+namespace SQLServerRegEx {
 
-    public SQLServerStartIndex() {
-    }
+    public class SQLServerStartIndex {
 
-    [SqlFunction(IsDeterministic = true, IsPrecise = true)]
-    public Int32 startIndex(String functionString, String columnString) {
-        return columnString.LastIndexOf(functionString);
+        public SQLServerStartIndex() {
+        }
+
+        [SqlFunction(IsDeterministic = true, IsPrecise = true)]
+        public static Int32 startIndex(String functionString, String columnString) {
+            return columnString.LastIndexOf(functionString);
+        }
+
     }
 
 }

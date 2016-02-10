@@ -3,4 +3,4 @@
 CREATE FUNCTION [dbo].nullOrEmpty(@columnString AS NVARCHAR(MAX)) 
 RETURNS INT
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.nullOrEmpty
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].nullOrEmpty

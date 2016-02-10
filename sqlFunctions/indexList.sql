@@ -4,4 +4,4 @@
 CREATE FUNCTION [dbo].indexList(@functionString AS NVARCHAR(MAX), @columnString AS NVARCHAR(MAX)) 
 RETURNS NVARCHAR(MAX)
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.indexList
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].indexList

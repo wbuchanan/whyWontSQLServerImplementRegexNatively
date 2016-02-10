@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		SQLServerRegEx\SQLServerRegEx.cs = SQLServerRegEx\SQLServerRegEx.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLServerDateTime", "SQLServerDateTime\SQLServerDateTime.csproj", "{ADD541FC-3191-4DAB-8369-5ABA5576FA8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,12 @@ Global
 		{4440A579-F9CC-4968-907B-D551008CA044}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4440A579-F9CC-4968-907B-D551008CA044}.x|Any CPU.ActiveCfg = Release|Any CPU
 		{4440A579-F9CC-4968-907B-D551008CA044}.x|Any CPU.Build.0 = Release|Any CPU
+		{ADD541FC-3191-4DAB-8369-5ABA5576FA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD541FC-3191-4DAB-8369-5ABA5576FA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD541FC-3191-4DAB-8369-5ABA5576FA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD541FC-3191-4DAB-8369-5ABA5576FA8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADD541FC-3191-4DAB-8369-5ABA5576FA8B}.x|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD541FC-3191-4DAB-8369-5ABA5576FA8B}.x|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

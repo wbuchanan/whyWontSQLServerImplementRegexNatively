@@ -3,4 +3,4 @@
 CREATE FUNCTION [dbo].toProper(@columnString AS NVARCHAR(MAX)) 
 RETURNS NVARCHAR(MAX)
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.toProper
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].toProper

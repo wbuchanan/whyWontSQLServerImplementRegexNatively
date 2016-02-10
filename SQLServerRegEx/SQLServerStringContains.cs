@@ -2,13 +2,19 @@
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-public partial class SQLServerStringContains {
+namespace SQLServerRegEx {
 
-    public SQLServerStringContains() { }
+    public class SQLServerStringContains {
 
-    [SqlFunction(IsDeterministic = true, IsPrecise = true)]
-    public Int32 stringContains(String functionString, String columnString) {
-        return columnString.Contains(functionString) ? 1 : 0;
+        public SQLServerStringContains() { }
+
+        [SqlFunction(IsDeterministic = true, IsPrecise = true)]
+        public static Int32 stringContains(String functionString, String columnString) {
+            return columnString.Contains(functionString) ? 1 : 0;
+        }
+
     }
 
 }
+
+

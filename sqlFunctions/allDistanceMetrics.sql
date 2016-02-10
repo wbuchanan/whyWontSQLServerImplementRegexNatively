@@ -5,7 +5,8 @@
 This method is still in development and will fail if you attempt to build it.  If you're familiar with 
 table valued CLR functions you may be able to help figure out what is causing the issue with the 
 methods used to construct this.
-CREATE FUNCTION [dbo].stringDist(@string1 AS NVARCHAR(MAX), @string2 AS NVARCHAR(MAX)) 
+*/
+CREATE FUNCTION [dbo].allDistanceMetrics(@string1 AS NVARCHAR(MAX), @string2 AS NVARCHAR(MAX)) 
 RETURNS TABLE (	Hamming_Distance FLOAT, 
 				Jaccard_Distance FLOAT, 
 				Jaro_Distance FLOAT,
@@ -18,11 +19,7 @@ RETURNS TABLE (	Hamming_Distance FLOAT,
 				Ratcliff_Obershelp_Similarity FLOAT,
 				Sorensen_Dice_Index FLOAT,
 				Sorensen_Dice_Distance FLOAT,
-				Tanimoto_Coefficient FLOAT,
-				Longest_Common_Substring NVARCHAR(MAX),
-				Longest_Common_Subsequence NVARCHAR(MAX))
+				Tanimoto_Coefficient FLOAT)
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.allDistanceMetrics
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].allDistanceMetrics
 GO
-
-*/

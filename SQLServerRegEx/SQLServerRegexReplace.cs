@@ -3,17 +3,21 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 using System.Text.RegularExpressions;
 
-public class SQLServerRegexReplace {
+namespace SQLServerRegEx {
 
-    public Regex regex;
+    public class SQLServerRegexReplace {
 
-    public SQLServerRegexReplace(RegexOptions regexopts, String pattern) {
-        this.regex = new Regex(pattern, regexopts);
-    }
+        public Regex regex;
 
-    [SqlFunction(IsDeterministic = true, IsPrecise = true)]
-    public String regexReplace(String replaceWith, String columnString) {
-        return this.regex.Replace(columnString, replaceWith);
+        public SQLServerRegexReplace(RegexOptions regexopts, String pattern) {
+            this.regex = new Regex(pattern, regexopts);
+        }
+
+        [SqlFunction(IsDeterministic = true, IsPrecise = true)]
+        public String regexReplace(String replaceWith, String columnString) {
+            return this.regex.Replace(columnString, replaceWith);
+        }
+
     }
 
 }

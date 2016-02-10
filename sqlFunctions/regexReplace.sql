@@ -4,4 +4,4 @@
 CREATE FUNCTION [dbo].regexReplace(@replaceWith AS NVARCHAR(MAX), @functionString AS NVARCHAR(MAX), @columnString AS NVARCHAR(MAX)) 
 RETURNS NVARCHAR(MAX)
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.regexReplace
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].regexReplace

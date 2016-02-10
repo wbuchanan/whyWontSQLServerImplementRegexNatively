@@ -1,0 +1,5 @@
+S:\billy\sqlServer\SQLServerDateTime\bin\Release\SQLServerDateTime.dll
+S:\billy\sqlServer\SQLServerDateTime\bin\Release\SQLServerDateTime.pdb
+S:\billy\sqlServer\SQLServerDateTime\obj\Release\SQLServerDateTime.csprojResolveAssemblyReference.cache
+S:\billy\sqlServer\SQLServerDateTime\obj\Release\SQLServerDateTime.dll
+S:\billy\sqlServer\SQLServerDateTime\obj\Release\SQLServerDateTime.pdb

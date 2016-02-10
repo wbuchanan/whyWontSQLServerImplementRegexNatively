@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
 public class CompStrings {
 
-    public String from = "";
-    public String to = "";
-    public String replace = "";
-    public String tolerance = "";
-    public String comp = "";
-    public String col = "";
-    
+    public readonly String from;
+    public String to;
+    public String replace;
+    public String tolerance;
+    public String comp;
+    public String col;
+
     public CompStrings(SqlString from, SqlString to, SqlString replace, SqlString tolerance, SqlString comp) {
         this.from = from.ToString();
         this.to = to.ToString();

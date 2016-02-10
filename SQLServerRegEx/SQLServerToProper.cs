@@ -3,22 +3,26 @@ using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 using System.Globalization;
 
-public partial class SQLServerToProper {
+namespace SQLServerRegEx {
 
-    public SQLServerToProper() { }
+    public class SQLServerToProper {
 
-    [SqlFunction(IsDeterministic = true, IsPrecise = true)]
-    public String toProper(String columnString) {
+        public SQLServerToProper() { }
 
-        // Creates a TextInfo object from which the method will apply the casing rules
-        TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
+        [SqlFunction(IsDeterministic = true, IsPrecise = true)]
+        public static String toProper(String columnString) {
 
-        // Constructs the proper cased string        
-        String retval = myTI.ToTitleCase(myTI.ToLower(columnString));
+            // Creates a TextInfo object from which the method will apply the casing rules
+            var myTI = new CultureInfo("en-US", false).TextInfo;
 
-        // Returns the String to the caller
-        return retval;
+            // Constructs the proper cased string
+            var retval = myTI.ToTitleCase(myTI.ToLower(columnString));
 
-    } // End of Method declaration
+            // Returns the String to the caller
+            return retval;
+
+        } // End of Method declaration
+
+    }
 
 }

@@ -3,4 +3,4 @@
 CREATE FUNCTION [dbo].startIndex(@functionString AS NVARCHAR(MAX), @columnString AS NVARCHAR(MAX)) 
 RETURNS INT
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.startIndex
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].startIndex

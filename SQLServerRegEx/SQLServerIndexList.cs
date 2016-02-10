@@ -2,37 +2,41 @@ using System;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-public partial class SQLServerIndexList {
+namespace SQLServerRegEx {
 
-    public SQLServerIndexList() { }
+    public class SQLServerIndexList {
 
-    // Defines method that returns a list of indices of the positions of a String match
-    [SqlFunction(IsDeterministic = true, IsPrecise = true)]
-    public String indexList(String functionString, String columnString) {
+        public SQLServerIndexList() { }
 
-        // Defines the starting index value
-        int start = new SQLServerStartIndex().startIndex(functionString, columnString);
+        // Defines method that returns a list of indices of the positions of a String match
+        [SqlFunction(IsDeterministic = true, IsPrecise = true)]
+        public static String indexList(String functionString, String columnString) {
 
-        // Defines the ending index value
-        int end = new SQLServerEndIndex().endIndex(functionString, columnString);
+            // Defines the starting index value
+            var start = SQLServerStartIndex.startIndex(functionString, columnString);
 
-        // Initializes a String object to store the result that will be returned
-        String retval = "";
+            // Defines the ending index value
+            var end = SQLServerEndIndex.endIndex(functionString, columnString);
 
-        // Loops over the integers between the start and end value
-        for (int i = start; i <= end; i++) {
+            // Initializes a String object to store the result that will be returned
+            var retval = "";
 
-            // For all but the final iteration append ', ' to the index value
-            if (i != end) retval += i.ToString() + ", ";
+            // Loops over the integers between the start and end value
+            for (int i = start; i <= end; i++) {
 
-            // For the last iteration just add the index value to the String
-            else retval += i.ToString();
+                // For all but the final iteration append ', ' to the index value
+                if (i != end) retval += i.ToString() + ", ";
 
-        } // End of Loop over the index integers
+                // For the last iteration just add the index value to the String
+                else retval += i.ToString();
 
-        // Return the String value to the caller
-        return retval;
+            } // End of Loop over the index integers
 
-    } // End of method declaration
+            // Return the String value to the caller
+            return retval;
+
+        } // End of method declaration
+
+    }
 
 }

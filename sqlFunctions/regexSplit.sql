@@ -4,4 +4,4 @@
 CREATE FUNCTION [dbo].regexSplit(@functionString AS NVARCHAR(MAX), @columnString AS NVARCHAR(MAX)) 
 RETURNS NVARCHAR(MAX)
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.regexSplit
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].regexSplit

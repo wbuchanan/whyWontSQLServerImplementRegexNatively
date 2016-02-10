@@ -2,18 +2,22 @@ using System;
 using System.Data.SqlTypes;
 using Microsoft.SqlServer.Server;
 
-public partial class SQLServerStringReplace {
+namespace SQLServerRegEx {
 
-    public string oldString;
-    public string newString;
+    public class SQLServerStringReplace {
 
-    public SQLServerStringReplace(String replaceThis, String withThis) {
-        this.oldString = replaceThis;
-        this.newString = withThis;
-    }
+        public string oldString;
+        public string newString;
 
-    public String stringReplace(String columnString) {
-        return columnString.Replace(this.oldString, this.newString);
+        public SQLServerStringReplace(String replaceThis, String withThis) {
+            this.oldString = replaceThis;
+            this.newString = withThis;
+        }
+
+        public String stringReplace(String columnString) {
+            return columnString.Replace(this.oldString, this.newString);
+        }
+
     }
 
 }

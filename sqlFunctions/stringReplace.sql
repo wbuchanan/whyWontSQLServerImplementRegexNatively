@@ -5,4 +5,4 @@ CREATE FUNCTION [dbo].stringReplace(@replaceWith AS NVARCHAR(MAX),
 									@columnString AS NVARCHAR(MAX)) 
 RETURNS NVARCHAR(MAX)
 AS 
-EXTERNAL NAME SQLServerRegEx.SQLRegex.stringReplace
+EXTERNAL NAME SQLServerRegEx.[SQLServerRegEx.SQLRegex].stringReplace
