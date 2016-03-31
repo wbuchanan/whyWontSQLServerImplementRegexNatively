@@ -13,19 +13,22 @@ speak_diff INT, speak_growth TINYINT, oral_diff INT, oral_growth TINYINT, litera
 comprehension_diff INT, comprehension_growth TINYINT, CONSTRAINT pk_access_growth_fact PRIMARY KEY (stdid, schyr));
 
 
-
 WITH source AS (
 SELECT * 
 FROM ACCESS_SCORE_FACT),
 lagleadids ASv(
-SELECT stdid, schyr,
+SELECT stdid, schyr, 
 ROW_NUMBER() OVER (PARTITION BY stdid ORDER BY stdid, schyr) rn,
 (ROW_NUMBER() OVER (PARTITION BY stdid ORDER BY stdid, schyr))/2 rndiv2,
 (ROW_NUMBER() OVER (PARTITION BY stdid ORDER BY stdid, schyr) + 1)/2 rnplus1div2,
 FROM source
 ),
 lagAndCurrentScores AS (
-SELECT a.stdid, a.schyr, a.overallsc, a.readsc, a.listensc, a.writesc, a.speaksc, a.oralsc, a.literacysc, a.comprehensionsc,
+SELECT a.stdid, a.schyr, a.grade, a.overallsc, a.readsc, a.listensc, a.writesc, a.speaksc, a.oralsc, a.literacysc, a.comprehensionsc,
+CASE 
+	WHEN b.rn%2 = 1 THEN MAX(CASE WHEN b.rn%2 = 0 THEN a.grade END) OVER (PARTITION BY a.stdid, a.schyr) 
+	ELSE MAX(CASE WHEN b.rn%2 = 1 THEN a.grade END) OVER (PARTITION BY a.stdid, a.schyr)
+END AS starting_grade,
 CASE 
 	WHEN b.rn%2 = 1 THEN MAX(CASE WHEN b.rn%2 = 0 THEN a.overallsc END) OVER (PARTITION BY a.stdid, a.schyr) 
 	ELSE MAX(CASE WHEN b.rn%2 = 1 THEN a.overallsc END) OVER (PARTITION BY a.stdid, a.schyr)
