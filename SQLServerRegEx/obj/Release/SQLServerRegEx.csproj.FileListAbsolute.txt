@@ -3,6 +3,5 @@ S:\billy\sqlServer\SQLServerRegEx\bin\Release\SQLServerRegEx.dll
 S:\billy\sqlServer\SQLServerRegEx\bin\Release\SQLServerRegEx.pdb
 S:\billy\sqlServer\SQLServerRegEx\bin\Release\SQLServerRegEx.dll.CodeAnalysisLog.xml
 S:\billy\sqlServer\SQLServerRegEx\bin\Release\SQLServerRegEx.dll.lastcodeanalysissucceeded
-S:\billy\sqlServer\SQLServerRegEx\obj\Release\SQLServerRegEx.csprojResolveAssemblyReference.cache
 S:\billy\sqlServer\SQLServerRegEx\obj\Release\SQLServerRegEx.dll
 S:\billy\sqlServer\SQLServerRegEx\obj\Release\SQLServerRegEx.pdb
