@@ -7,5 +7,3 @@ Our SQL Server instance is 2008 R2 and the server uses v 2.0 of the .Net framewo
 # Design Info
 The code is organized with a single class containing static methods used to implement the functions/methods of interest.  Each method in the SQLRegex class references classes from which the method is implemented.  This helps when the static method is cached and subsequent calls fail to initialize a new object.  However, using the safe assembly access setting it is not possible to initialize static members in the classes that get created by the method calls.  
 
-# Additional Work/TODO
-In addition to some basic regular expression and string processing methods, I'm also going to work on integrating some string distance metrics to provide fuzzy matching algorithms/access.  
