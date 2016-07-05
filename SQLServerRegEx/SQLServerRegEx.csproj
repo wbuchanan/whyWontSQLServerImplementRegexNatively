@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApproximatelyEquals.cs" />
+    <Compile Include="AllDistanceMetrics.cs" />
     <Compile Include="CompStrings.cs" />
     <Compile Include="FuzzyStringComparisonOptions.cs" />
     <Compile Include="FuzzyStringComparisonTolerance.cs" />
